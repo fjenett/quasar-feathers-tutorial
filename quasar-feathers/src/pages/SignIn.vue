@@ -1,18 +1,22 @@
 <template>
   <q-page class="flex flex-center">
-    <q-dialog name="signin-dialog" v-model="showDialog" :title="title" @ok="onOk" @hide="onHide" >
-      <div slot="body">
-        <div class="row q-mb-md">
-          <q-input
-            v-model="email" type="email" name="email" stack-label="E-mail" class="full-width" autofocus
-          />
-        </div>
-        <div class="row">
-          <q-input
-            v-model="password" type="password" name="email" stack-label="Password" class="full-width"
-          />
-        </div>
-      </div>
+    <q-dialog v-model="showDialog" persistent>
+      <q-card style="min-width: 350px">
+
+        <q-card-section>
+          <q-input v-model="email" type="email" name="email" label="E-mail" class="full-width" autofocus />
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <q-input v-model="password" type="password" name="email" label="Password" class="full-width" />
+        </q-card-section>
+
+        <q-card-actions align="right" class="text-primary">
+          <q-btn flat :label="title" @click="onOk" />
+          <q-btn flat label="Cancel" @click="onHide" />
+        </q-card-actions>
+
+      </q-card>
     </q-dialog>
   </q-page>
 </template>
@@ -31,7 +35,8 @@ export default {
       showDialog: true,
       email: null,
       password: null,
-      title: null
+      title: null,
+      okLabel: 'Sign in'
     }
   },
   computed: {

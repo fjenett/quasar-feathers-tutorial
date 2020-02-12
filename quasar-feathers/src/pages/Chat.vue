@@ -14,7 +14,7 @@
           <q-item v-for="user in users" :key="user.id">
             <q-item-side :avatar="user.avatar" />
             <q-item-main>
-              <q-item-tile label>{{user.email}}</q-item-tile>
+              <q-item-label label>{{user.email}}</q-item-label>
             </q-item-main>
             <q-item-side right>
               <q-item-tile icon="chat_bubble" color="green" />
@@ -37,13 +37,13 @@
 <script>
 import api from 'src/api'
 import moment from 'moment'
-import { QInput, QItemTile, QChatMessage } from 'quasar'
+import { QInput, QItemLabel, QChatMessage } from 'quasar'
 
 export default {
   name: 'q-chat',
   components: {
     QInput,
-    QItemTile,
+    QItemLabel,
     QChatMessage
   },
   props: ['user'],
