@@ -45,5 +45,7 @@
   ],
   "resolutions": {
     "ajv": "6.8.1"
-  }
+  },
+  "main": ".eslintrc.js",
+  "license": "ISC"
 }
