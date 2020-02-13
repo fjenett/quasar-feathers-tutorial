@@ -29,8 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 // Host the public folder
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(app.get('public')));
-}
-else {
+} else {
   app.use('/statics/', express.static('../../src/statics'));
 }
 
