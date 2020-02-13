@@ -26,10 +26,12 @@ const auth = {
         return this.fetchUser(response.accessToken)
       })
       .then(user => {
+        console.log(user)
         this.user = user
         return Promise.resolve(user)
       })
       .catch((err) => {
+        console.log(err)
         this.user = null
         return Promise.reject(err)
       })
@@ -84,7 +86,6 @@ const auth = {
       password: password
     })
   }
-
 }
 
 export default auth

@@ -90,7 +90,7 @@ export default {
           this.$q.notify({ type: 'positive', message: 'You are now logged out, sign in again to continue to work' })
         })
         .catch(() => {
-          this.$q.notify({ type: 'positive', message: 'Cannot logout, please check again in a few minutes' })
+          this.$q.notify({ type: 'negative', message: 'Cannot logout, please check again in a few minutes' })
         })
     },
     setUser (user) {

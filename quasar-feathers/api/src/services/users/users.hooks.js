@@ -6,12 +6,12 @@ const gravatar = require('../../hooks/gravatar');
 module.exports = {
   before: {
     all: [],
-    find: [ authenticate('jwt') ],
-    get: [ authenticate('jwt') ],
+    find: [authenticate('jwt')],
+    get: [authenticate('jwt')],
     create: [hashPassword('password'), gravatar()],
-    update: [ authenticate('jwt') ],
-    patch: [ authenticate('jwt') ],
-    remove: [ authenticate('jwt') ]
+    update: [authenticate('jwt')],
+    patch: [authenticate('jwt')],
+    remove: [authenticate('jwt')]
   },
 
   after: {

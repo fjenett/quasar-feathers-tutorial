@@ -61,7 +61,7 @@ export default {
             this.$q.notify({ type: 'positive', message: 'You are now logged in' })
           })
           .catch(_ => {
-            this.$q.notify({ type: 'positive', message: 'Cannot register, please check your e-mail or password' })
+            this.$q.notify({ type: 'negative', message: 'Cannot register, please check your e-mail or password' })
             this.goHome()
           })
       } else {
@@ -70,7 +70,7 @@ export default {
             this.$q.notify({ type: 'positive', message: 'You are now logged in' })
           })
           .catch(_ => {
-            this.$q.notify({ type: 'positive', message: 'Cannot sign in, please check your e-mail or password' })
+            this.$q.notify({ type: 'negative', message: 'Cannot sign in, please check your e-mail or password' })
             this.goHome()
           })
       }

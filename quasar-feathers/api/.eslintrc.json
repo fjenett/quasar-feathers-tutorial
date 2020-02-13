@@ -21,9 +21,6 @@
       "error",
       "single"
     ],
-    "semi": [
-      "error",
-      "always"
-    ]
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true}]
   }
 }
