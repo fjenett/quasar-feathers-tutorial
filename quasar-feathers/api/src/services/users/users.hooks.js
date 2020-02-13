@@ -1,6 +1,6 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
 const { hashPassword, protect } = require('@feathersjs/authentication-local').hooks;
-const commonHooks  = require('feathers-hooks-common');
+const commonHooks = require('feathers-hooks-common');
 const gravatar = require('../../hooks/gravatar');
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
     all: [],
     find: [ authenticate('jwt') ],
     get: [ authenticate('jwt') ],
-    create: [hashPassword('passwordField'), gravatar()],
+    create: [hashPassword('password'), gravatar()],
     update: [ authenticate('jwt') ],
     patch: [ authenticate('jwt') ],
     remove: [ authenticate('jwt') ]
